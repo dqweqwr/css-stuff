@@ -1,0 +1,36 @@
+body {
+  margin: 0px;
+  padding: 0;
+}
+.box, .box1, .box2, .box6 {
+  border: 1px solid #000;
+  background-color: purple;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.box2 {
+  background-color: blue;
+}
+
+.box1 {
+  background-color: orange;
+  grid-column-start: span 2;
+}
+
+.box6 {
+  background-color: yellow;
+  grid-column-end: 2;
+}
+
+/* justify-* moves items along the x axis */
+/* align-* moves items along the y axis */
+
+.container {
+  display: grid;
+  background-color: rgb(67, 235, 67);
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 50px;
+  min-height: 300px;
+}
