@@ -2,11 +2,16 @@ body {
   margin: 0px;
   padding: 0;
 }
+
+.gridstuff {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .box, .box1, .box2, .box6 {
-  border: 1px solid #000;
   background-color: purple;
   color: white;
-  padding: 20px;
   border-radius: 5px;
 }
 
@@ -16,12 +21,6 @@ body {
 
 .box1 {
   background-color: orange;
-  grid-column-start: span 2;
-}
-
-.box6 {
-  background-color: yellow;
-  grid-column-end: 2;
 }
 
 /* justify-* moves items along the x axis */
@@ -30,7 +29,121 @@ body {
 .container {
   display: grid;
   background-color: rgb(67, 235, 67);
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: 50px;
-  min-height: 300px;
+  grid-template: 50px 50px / 50px 50px;
+  grid-auto-flow: column;
+  grid-auto-columns: 50px;
+  row-gap: 20px;
 }
+
+.container2 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 178, 133);
+  height: 200px;
+}
+
+.rectangle {
+  height: 40px;
+  width: 80px;
+  background-color: grey;
+  border: 1px solid #000;
+}
+
+.container3 {
+  display: inline-grid;
+  background-color: lightblue;
+  grid-template-rows: repeat(5, 60px);
+  grid-template-columns: repeat(5, 60px);
+}
+
+.a, .b, .c, .d, .e {
+  text-align: center;
+  border: 1px solid #000;
+}
+
+/*  grid area syntax: 
+    grid-area: grid-row-start / grid-col-start / grid-row-end / grid-col-end  */
+
+.a {
+  /* grid-row: 1 / 3;
+  grid-column: 1 / 6; */
+  grid-area: 1 / 1 / 3 / 6;
+}
+
+.b {
+  grid-row: 3 / 6;
+}
+
+.c {
+  /* grid-row: 3 / 5;
+  grid-column: 2 / 4; */
+  grid-area: 3 / 2 / 5 / 4;
+}
+
+.d {
+  /* grid-row: 5 / 6;
+  grid-column: 2 / 4; */
+  grid-area: 5 / 2 / 6 / 4;
+}
+
+.e {
+  /* grid-row: 3 / 6;
+  grid-column: 4 / 6; */
+  grid-area: 3 / 4 / 6 / 6;
+}
+
+.container4 {
+  display: inline-grid;
+  grid-template-columns: repeat(5, 60px);
+  grid-template-rows: repeat(5, 60px);
+  background-color: #aa7d7d;
+  grid-template-areas: 
+  "a2 a2 a2 a2 a2"
+  "a2 a2 a2 a2 a2"
+  "b2 c2 c2 e2 e2"
+  "b2 c2 c2 e2 e2"
+  "b2 d2 . e2 e2";
+}
+
+.a2, .b2, .c2, .d2, .e2 {
+  text-align: center;
+  border: 1px solid #000;
+}
+
+.a2 {
+  grid-area: a2;
+}
+
+.b2 {
+  grid-area: b2;
+}
+
+.c2 {
+  grid-area: c2;
+}
+
+.d2 {
+  grid-area: d2;
+}
+
+.e2 {
+  grid-area: e2;
+}
+
+/* min function chooses the smallest value and uses 
+  that as the size
+
+  ex: width: min(500px, 70%); would choose the smallest
+  value between 500px and 70% of the screen size. If
+  70% of the screen is bigger than 500px, min will use
+  500px as the width. Else, it would use 70% of the 
+  screen size*/
+
+/* .min {
+  padding: 20px;
+  background-color: grey;
+  width: min(500px, 80%);
+} */
+
+/* clamp usage: clamp(lowest, ideal, highest) */
