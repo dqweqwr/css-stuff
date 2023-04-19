@@ -55,14 +55,14 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 250px auto;
   height: 100vh;
 }
 
 /* Sidebar */
 .svg {
-  height: 42px;
-  width: 42px;
+  height: 32px;
+  width: 32px;
 }
 
 .sidebar {
@@ -93,12 +93,95 @@ body {
   height: 20px;
 }
 
-/* dashboard */
+/**/
 .dashboard {
   display: flex;
   flex-direction: column;
 }
 
+/* header */
+.header {
+  padding: 20px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header .top, .header .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.header .top .left {
+  display: flex;
+  gap: 32px;
+  flex: 1;
+}
+
+.header .top .right {
+  display: flex;
+  gap: 24px;
+  font-size: 24px;
+  font-weight: 700;
+  align-items: center;
+}
+
+.header .top .right .svg {
+  height: 50px;
+  width: 50px;
+}
+
+.searchbar {
+  width: min(500px, 100%);
+  height: 32px;
+  background-color: rgb(173, 173, 173);
+  border-radius: 20px;
+}
+
+.header .bottom .left {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.header .bottom .left .svg {
+  width: 80px;
+  height: 80px;
+}
+
+.header .bottom .left .welcome-message {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  gap: 8px;
+}
+
+.header .bottom .left .welcome-message .top {
+  font-size: 14px;
+}
+
+.header .bottom .left .welcome-message .bottom {
+  font-size: 20px;
+}
+
+.header .bottom .right {
+  display: flex;
+  gap: 24px;
+}
+
+.header .bottom .right button {
+  background-color: #0ea5e9;
+  border-radius: 24px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 12px 32px;
+}
+
+/* dashboard */
 .dashboard .content {
   background-color: #e0f2fe;
   flex: 1;
