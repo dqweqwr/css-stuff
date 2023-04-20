@@ -93,6 +93,11 @@ body {
   padding-bottom: 24px;
 }
 
+.sidebar ul li:hover {
+  transform: scale(1.10);
+  transition-duration: 100ms;
+}
+
 .sidebar ul li .svg {
   width: 20px;
   height: 20px;
@@ -111,6 +116,7 @@ body {
   flex-direction: column;
   gap: 16px;
   background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .header .top, .header .bottom {
@@ -217,6 +223,12 @@ body {
   flex-direction: column;
   border-left: 10px solid rgb(255, 196, 0);
   gap: 16px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.content .left .cards .card:hover {
+  transform: scale(1.07);
+  transition-duration: 200ms;
 }
 
 .content .left .cards .card .card-title {
@@ -245,6 +257,7 @@ body {
   flex-direction: column;
   gap: 16px;
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .content .right .top {
