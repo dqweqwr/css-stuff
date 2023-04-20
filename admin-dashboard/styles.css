@@ -55,6 +55,7 @@ table {
 
 body {
   font-family: 'Ubuntu', sans-serif;
+  background-color: #b6dffd;
 }
 
 .container {
@@ -109,6 +110,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  background-color: #fff;
 }
 
 .header .top, .header .bottom {
@@ -193,17 +195,23 @@ body {
   padding: 40px;
 }
 
-.content .left {
+.content .left .left-title {
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 16px;
+}
+
+.content .left .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 40px;
 }
 
-.content .left .card {
+.content .left .cards .card {
   background-color: #ffffff;
   height: 225px;
   border-radius: 8px;
-  padding: 32px;
+  padding: 40px 24px;
   line-height: 1.1;
   display: flex;
   flex-direction: column;
@@ -211,7 +219,7 @@ body {
   gap: 16px;
 }
 
-.content .left .card .card-title {
+.content .left .cards .card .card-title {
   font-weight: bold;
   font-size: 24px;
 }
@@ -219,15 +227,74 @@ body {
 .content .right {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 40px;
+}
+
+.content .right .right-title {
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 16px;
 }
 
 .content .right .card {
   background-color: #fff;
+  padding: 40px 24px;
+  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 8px;
+}
+
+.content .right .top {
+}
+
+.content .right .top .card .card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.content .right .top .card .card-content {
+  color: rgb(71, 68, 68);
+}
+
+.content .right .top .card .content-separator {
+  color: rgb(71, 68, 68);
+  border-bottom: 1px solid rgb(165, 164, 164);
+}
+
+.content .right .bottom {
+  flex: 1;
+}
+
+.content .right .bottom .card {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.content .right .bottom .card .profile {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.content .right .bottom .card .profile .svg {
+  height: 50px;
+  width: 50px;
+}
+
+.content .right .bottom .card .profile .profile-content .username {
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 4px;
+}
+
+.content .right .bottom .card .profile .profile-content .bio {
 }
 
 /* dashboard */
 .dashboard .content {
-  background-color: #b6dffd;
   flex: 1;
 }
